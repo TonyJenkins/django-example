@@ -10,6 +10,9 @@ class Faculty(models.Model):
     name = models.CharField(max_length=64)
     dean = models.CharField(max_length=64, null=True)
 
+    class Meta:
+        verbose_name_plural='Faculties'
+
 
 class Tutor(models.Model):
     name = models.CharField(max_length=64)
