@@ -46,6 +46,9 @@ class Tutor(models.Model):
     faculty = models.ForeignKey(Faculty, on_delete=models.SET_NULL, null=True, related_name='members')
     room = models.ForeignKey(Room, on_delete=models.SET_NULL, null=True, related_name='occupants')
 
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
     class Meta:
         ordering = [
             'name',
