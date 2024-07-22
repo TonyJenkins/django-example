@@ -1,0 +1,24 @@
+[
+  {
+    "model": "staff_list.tutor",
+    "pk": 1,
+    "fields": {
+      "name": "Smith, John",
+      "faculty": 2,
+      "room": 12,
+      "created": "2024-07-22T14:06:56.107Z",
+      "updated": "2024-07-22T14:06:56.110Z"
+    }
+  },
+  {
+    "model": "staff_list.tutor",
+    "pk": 2,
+    "fields": {
+      "name": "Jones, Jane",
+      "faculty": 1,
+      "room": 1,
+      "created": "2024-07-22T14:06:56.107Z",
+      "updated": "2024-07-22T14:06:56.110Z"
+    }
+  }
+]

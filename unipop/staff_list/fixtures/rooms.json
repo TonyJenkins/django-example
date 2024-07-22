@@ -1,0 +1,130 @@
+[
+  {
+    "model": "staff_list.room",
+    "pk": 1,
+    "fields": {
+      "number": "TU101",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 2,
+    "fields": {
+      "number": "TU102",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 3,
+    "fields": {
+      "number": "TU103",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 4,
+    "fields": {
+      "number": "TU104",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 5,
+    "fields": {
+      "number": "TU105",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 6,
+    "fields": {
+      "number": "TU106",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 7,
+    "fields": {
+      "number": "TU107",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 8,
+    "fields": {
+      "number": "TU108",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 9,
+    "fields": {
+      "number": "TU109",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 11,
+    "fields": {
+      "number": "TU110",
+      "building": "Turing"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 12,
+    "fields": {
+      "number": "LO201",
+      "building": "Lovelace"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 13,
+    "fields": {
+      "number": "LO202",
+      "building": "Lovelace"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 14,
+    "fields": {
+      "number": "LO203",
+      "building": "Lovelace"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 15,
+    "fields": {
+      "number": "LO204",
+      "building": "Lovelace"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 16,
+    "fields": {
+      "number": "LO301",
+      "building": "Lovelace"
+    }
+  },
+  {
+    "model": "staff_list.room",
+    "pk": 17,
+    "fields": {
+      "number": "LO302",
+      "building": "Lovelace"
+    }
+  }
+]

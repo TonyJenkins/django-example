@@ -1,0 +1,18 @@
+[
+  {
+    "model": "staff_list.faculty",
+    "pk": 1,
+    "fields": {
+      "name": "Underwater Needlework",
+      "dean": "Dr Alan Stitcher"
+    }
+  },
+  {
+    "model": "staff_list.faculty",
+    "pk": 2,
+    "fields": {
+      "name": "Extreme Basket Weaving",
+      "dean": "Prof Janet Wicker"
+    }
+  }
+]
