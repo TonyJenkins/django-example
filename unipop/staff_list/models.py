@@ -2,8 +2,16 @@ from django.db import models
 
 
 class Room(models.Model):
+
+    class Building(models.TextChoices):
+        TURING = 'Turing'
+        LOVELACE = 'Lovelace'
+
     number = models.CharField(max_length=8)
-    building = models.CharField(max_length=16)
+    building = models.CharField(
+        max_length=12,
+        choices=Building,
+    )
 
     class Meta:
         ordering = [
@@ -14,6 +22,9 @@ class Room(models.Model):
             'number',
             'building',
         ]
+
+    def __str__(self):
+        return f'{self.number}, {self.building}'
 
 
 class Faculty(models.Model):
@@ -39,3 +50,6 @@ class Tutor(models.Model):
         ordering = [
             'name',
         ]
+
+    def __str__(self):
+        return self.name
