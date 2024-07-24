@@ -12,35 +12,43 @@
     <p class="mb-4">
         Our current staff list is below. Click on a staff member's name to view their profile.
     </p>
+
+    <div class="has-text-centered mb-4 mx-auto">
     
-    <div class="has-text-centered">
-        <table class="table mb-4 mx-auto">
-            <thead>
-                <tr class="is-light">
-                    <th class="has-text-grey-darker">Name</th>
-                    <th class="has-text-grey-darker">Faculty</th>
-                    <th class="has-text-grey-darker">Office</th>
-                    <th class="has-text-grey-darker">Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for staff_member in staff %}
-                    <tr>
-                        <td>
-                            {{ staff_member.surname }}, {{ staff_member.forenames }}
-                        </td>
-                        <td>
-                            {{ staff_member.faculty }}
-                        </td>
-                        <td>
-                            {{ staff_member.room }}
-                        </td>
-                        <td>
-                            {{ staff_member.email }}
-                        </td>
+        {% if staff %}
+            <table class="table">
+                <thead>
+                    <tr class="is-light">
+                        <th class="has-text-grey-darker">Name</th>
+                        <th class="has-text-grey-darker">Faculty</th>
+                        <th class="has-text-grey-darker">Office</th>
+                        <th class="has-text-grey-darker">Email</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {% for staff_member in staff %}
+                        <tr>
+                            <td>
+                                {{ staff_member.surname }}, {{ staff_member.forenames }}
+                            </td>
+                            <td>
+                                {{ staff_member.faculty }}
+                            </td>
+                            <td>
+                                {{ staff_member.room }}
+                            </td>
+                            <td>
+                                {{ staff_member.email }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>
+                There are no staff members to display.
+            </p>
+        {% endif %}
     </div>
+    
 {% endblock %}
