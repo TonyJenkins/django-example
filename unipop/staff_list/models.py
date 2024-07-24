@@ -42,7 +42,12 @@ class Faculty(models.Model):
 
 
 class Tutor(models.Model):
-    name = models.CharField(max_length=64)
+    surname = models.CharField(max_length=64)
+    forenames = models.CharField(max_length=64)
+    email = models.EmailField(null=True)
+
+    slug = models.SlugField(unique=True)
+
     faculty = models.ForeignKey(Faculty, on_delete=models.SET_NULL, null=True, related_name='members')
     room = models.ForeignKey(Room, on_delete=models.SET_NULL, null=True, related_name='occupants')
 
@@ -51,8 +56,9 @@ class Tutor(models.Model):
 
     class Meta:
         ordering = [
-            'name',
+            'surname',
+            'forenames',
         ]
 
     def __str__(self):
-        return self.name
+        return f'self.forenames self.surname'

@@ -20,19 +20,23 @@
                     <th class="has-text-grey-darker">Name</th>
                     <th class="has-text-grey-darker">Faculty</th>
                     <th class="has-text-grey-darker">Office</th>
+                    <th class="has-text-grey-darker">Email</th>
                 </tr>
             </thead>
             <tbody>
                 {% for staff_member in staff %}
                     <tr>
                         <td>
-                            {{ staff_member.name }}
+                            {{ staff_member.surname }}, {{ staff_member.forenames }}
                         </td>
                         <td>
                             {{ staff_member.faculty }}
                         </td>
                         <td>
                             {{ staff_member.room }}
+                        </td>
+                        <td>
+                            {{ staff_member.email }}
                         </td>
                     </tr>
                 {% endfor %}

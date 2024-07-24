@@ -10,10 +10,16 @@ admin.site.register(Faculty)
 class TutorAdmin(admin.ModelAdmin):
 
     list_display = [
-            'name',
+            'surname',
+            'forenames',
+            'email',
             'room',
             'faculty',
         ]
+
+    prepopulated_fields = {
+        'slug': ('surname', 'forenames'),
+    }
 
     list_filter = [
         'room',
@@ -21,7 +27,8 @@ class TutorAdmin(admin.ModelAdmin):
     ]
 
     ordering = [
-        'name',
+        'surname',
+        'forenames',
     ]
 
     show_facets = admin.ShowFacets.ALWAYS
