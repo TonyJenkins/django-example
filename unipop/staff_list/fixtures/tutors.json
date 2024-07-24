@@ -3,22 +3,28 @@
     "model": "staff_list.tutor",
     "pk": 1,
     "fields": {
-      "name": "Smith, John",
+      "surname": "Jones",
+      "forenames": "John",
+      "email": "john.jones@pop.ac.uk",
+      "slug": "jones-john",
       "faculty": 2,
-      "room": 12,
-      "created": "2024-07-22T14:06:56.107Z",
-      "updated": "2024-07-22T14:06:56.110Z"
+      "room": 13,
+      "created": "2024-07-24T12:48:29.025Z",
+      "updated": "2024-07-24T12:48:29.025Z"
     }
   },
   {
     "model": "staff_list.tutor",
     "pk": 2,
     "fields": {
-      "name": "Jones, Jane",
+      "surname": "Smith",
+      "forenames": "Jane",
+      "email": "jane.smith@pop.ac.uk",
+      "slug": "smith-jane",
       "faculty": 1,
-      "room": 1,
-      "created": "2024-07-22T14:06:56.107Z",
-      "updated": "2024-07-22T14:06:56.110Z"
+      "room": 8,
+      "created": "2024-07-24T12:48:49.084Z",
+      "updated": "2024-07-24T12:48:49.084Z"
     }
   }
 ]
