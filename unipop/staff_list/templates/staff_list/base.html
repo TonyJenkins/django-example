@@ -21,11 +21,25 @@
             </header>
 
             <main>
-
+                <div class="columns">
+                    <div class="column is-one-fifth has-text-centered">
+                        <h1 class="title is-2 has-text-grey-darker">Menu</h1>
+                    </div>
+                    <div class="column is-four-fifths">
+                        <h1 class="title is-1 has-text-grey-darker">
+                            {% block page_title %}{% endblock %}
+                        </h1>
+                    
+                        {% block content %}{% endblock %}
+ 
+                    </div>
+                </div>
             </main>
 
             <footer class="footer">
-
+                <div class="content has-text-centered">
+                    <p>&copy; 2024 University of Poppleton</p>
+                </div>
             </footer>
 
         </div>
