@@ -1,5 +1,14 @@
 from django.shortcuts import render
 
+from .models import Tutor
+
 
 def all_staff_list(request):
-    return render(request, 'staff_list/all_staff_list.html')
+
+    staff = Tutor.objects.all()
+
+    context = {
+        'staff': staff,
+    }
+
+    return render(request, 'staff_list/all_staff_list.html', context,)

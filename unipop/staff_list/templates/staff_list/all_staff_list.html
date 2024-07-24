@@ -13,4 +13,8 @@
         Our current staff list is below. Click on a staff member's name to view their profile.
     </p>
     
+    {% for staff_member in staff %}
+        {{ staff_member.name }}
+    {% endfor %}
+    
 {% endblock %}
