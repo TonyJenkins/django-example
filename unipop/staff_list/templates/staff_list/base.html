@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <link href="{% static "css/unipop.css" %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container is-fluid py-2">
+
+            <header class="p-4 mb-4">
+                <div class="columns is-align-items-center">
+                    <div class="column is-one-third">
+                        <img src="{% static "img/unipop.png" %}" alt="UniPop Logo">
+                    </div>
+                    <div class="column is-two-thirds has-text-centered">
+                        <h1 class="title is-1">Meet Our Staff</h1>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+
+            </main>
+
+            <footer class="footer">
+
+            </footer>
+
+        </div>
+
+    </body>
+</html>
