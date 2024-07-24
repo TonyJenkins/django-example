@@ -24,7 +24,7 @@ class Room(models.Model):
         ]
 
     def __str__(self):
-        return f'{self.number}, {self.building}'
+        return f'Room {self.number}, {self.building} Building'
 
 
 class Faculty(models.Model):
@@ -38,7 +38,7 @@ class Faculty(models.Model):
         verbose_name_plural = 'Faculties'
 
     def __str__(self):
-        return self.name
+        return f'Faculty of {self.name}'
 
 
 class Tutor(models.Model):

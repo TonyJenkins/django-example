@@ -9,12 +9,34 @@
 {% endblock %}
 
 {% block content %}
-    <p>
+    <p class="mb-4">
         Our current staff list is below. Click on a staff member's name to view their profile.
     </p>
     
-    {% for staff_member in staff %}
-        {{ staff_member.name }}
-    {% endfor %}
-    
+    <div class="has-text-centered">
+        <table class="table mb-4 mx-auto">
+            <thead>
+                <tr class="is-light">
+                    <th class="has-text-grey-darker">Name</th>
+                    <th class="has-text-grey-darker">Faculty</th>
+                    <th class="has-text-grey-darker">Office</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for staff_member in staff %}
+                    <tr>
+                        <td>
+                            {{ staff_member.name }}
+                        </td>
+                        <td>
+                            {{ staff_member.faculty }}
+                        </td>
+                        <td>
+                            {{ staff_member.room }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
