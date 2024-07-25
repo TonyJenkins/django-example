@@ -1,0 +1,30 @@
+{% extends 'staff_list/base.html' %}
+{% load static %}
+
+{%  block title %}
+    Staff Member: {{ staff_details.forenames }} {{ staff_details.surname }}
+{%  endblock %}
+
+{% block page_title %}
+    {{ staff_details.forenames }} {{ staff_details.surname }}
+{% endblock %}
+
+{% block content %}
+    <div class="columns mb-4">
+        <div class="column is-two-fifths">
+            <img src="{% static "img/beaker.png" %}" alt="Staff Image">
+        </div>
+        <div class="column is-three-fifths">
+            <p class="mb-4">
+                {{ staff_details.forenames }} {{ staff_details.surname }} is a member of the {{ staff_details.faculty }}.
+            </p>
+            <p class="mb-4">
+                You can find this staff member in {{ staff_details.room }}.
+            </p>
+            <p class="mb-4">
+                For further contact information you can email the Dean of {{ staff_details.faculty }},
+                {{ staff_details.faculty.dean }}, who will be pleased to help.
+            </p
+        </div>
+    </div>
+{% endblock %}
