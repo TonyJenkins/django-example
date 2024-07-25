@@ -14,7 +14,6 @@
     </p>
 
     <div class="has-text-centered mb-4 mx-auto">
-    
         {% if staff %}
             <table class="table">
                 <thead>
@@ -42,7 +41,7 @@
                                 {{ staff_member.email }}
                             </td>
                             <td>
-                                <a href="{% url "staff_list:staff_detail" staff_member.id %}">Click</a>
+                                <a href="{% url "staff_list:staff_detail" staff_member.id %}"><span class="icon is-color-primary"><i class="fa-solid fa-user"></i></span></a>
                             </td>
                         </tr>
                     {% endfor %}
