@@ -23,3 +23,14 @@ def staff_detail(request, tutor_id):
     }
 
     return render(request, 'staff_list/staff_detail.html', context)
+
+
+def staff_detail_from_slug(request, slug):
+
+    staff_details = Tutor.objects.get(slug=slug)
+
+    context = {
+        'staff_details': staff_details,
+    }
+
+    return render(request, 'staff_list/staff_detail.html', context)

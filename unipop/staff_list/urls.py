@@ -12,4 +12,8 @@ urlpatterns = [
          views.staff_detail,
          name='staff_detail'
          ),
+    path('<slug:slug>/',
+         views.staff_detail_from_slug,
+         name='staff_detail_from_slug'
+         ),
 ]
