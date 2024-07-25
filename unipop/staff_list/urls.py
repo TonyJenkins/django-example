@@ -10,6 +10,6 @@ urlpatterns = [
          ),
     path('<int:tutor_id>/',
          views.staff_detail,
-         name='staff_detail.html'
+         name='staff_detail'
          ),
 ]

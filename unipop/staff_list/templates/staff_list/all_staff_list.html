@@ -42,7 +42,7 @@
                                 {{ staff_member.email }}
                             </td>
                             <td>
-                                <a href="{{ staff_member.id }}">Click</a>
+                                <a href="{% url "staff_list:staff_detail" staff_member.id %}">Click</a>
                             </td>
                         </tr>
                     {% endfor %}
