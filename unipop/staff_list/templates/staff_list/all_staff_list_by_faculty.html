@@ -13,30 +13,16 @@
         Our current staff list is below. Click on a staff member's name to view their profile.
     </p>
 
-    <div class="has-text-centered mb-4 mx-auto">
-        {% if staff %}
-            <h2 class="title is-3 is-color-grey-darker has-text-left">{{ staff.first.faculty.name }}</h2>
+    {% regroup staff by faculty.name as faculty_staff %}
 
-            {% include 'staff_list/staff_table_open.html' %}
+    {% for faculty in faculty_staff %}
+        <h2 class="title is-3 is-color-grey-darker has-text-left">{{ faculty.grouper }}</h2>
+        {% include 'staff_list/staff_table_open.html' %}
+        {% for staff_member in faculty.list %}
+            {% include 'staff_list/staff_table_row.html' %}
+        {% endfor %}
+        {% include 'staff_list/staff_table_close.html' %}
 
-            {% for staff_member in staff %}
-                {% if not forloop.first %}
-                    {% ifchanged staff_member.faculty.name %}
-                        {% include 'staff_list/staff_table_close.html' %}
-                        <h2 class="title is-3 is-color-grey-darker has-text-left">{{ staff_member.faculty.name }}</h2>
-                        {% include 'staff_list/staff_table_open.html' %}
-                    {% endifchanged %}
-                {% endif %}
+    {% endfor %}
 
-                {% include 'staff_list/staff_table_row.html' %}
-
-            {% endfor %}
-
-            {% include 'staff_list/staff_table_close.html' %}
-        {% else %}
-            <p>
-             There are no staff members to display.
-            </p>
-        {% endif %}
-    </div>
 {% endblock %}
