@@ -15,39 +15,11 @@
 
     <div class="has-text-centered mb-4 mx-auto">
         {% if staff %}
-            <table class="table">
-                <thead>
-                    <tr class="is-light">
-                        <th class="has-text-grey-darker">Name</th>
-                        <th class="has-text-grey-darker">Faculty</th>
-                        <th class="has-text-grey-darker">Office</th>
-                        <th class="has-text-grey-darker">Email</th>
-                        <th class="has-text-grey-darker">Home Page</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for staff_member in staff %}
-                        <tr>
-                            <td>
-                                {{ staff_member.surname }}, {{ staff_member.forenames }}
-                            </td>
-                            <td>
-                                {{ staff_member.faculty }}
-                            </td>
-                            <td>
-                                {{ staff_member.room }}
-                            </td>
-                            <td>
-                                {{ staff_member.email }}
-                            </td>
-                            <td>
-                                <a href="{% url "staff_list:staff_detail" staff_member.id %}"><span class="icon is-color-primary"><i class="fa-solid fa-user"></i></span></a>
-                                <a href="{% url "staff_list:staff_detail_from_slug" staff_member.slug %}"><span class="icon is-color-info"><i class="fa-solid fa-user"></i></span></a>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+            {% include 'staff_list/staff_table_open.html' %}
+                {% for staff_member in staff %}
+                    {% include 'staff_list/staff_table_row.html' %}
+                {% endfor %}
+            {% include 'staff_list/staff_table_close.html' %}
         {% else %}
             <p>
                 There are no staff members to display.

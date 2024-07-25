@@ -34,3 +34,16 @@ def staff_detail_from_slug(request, slug):
     }
 
     return render(request, 'staff_list/staff_detail.html', context)
+
+
+def staff_list_by_faculty(request):
+
+    staff = (Tutor.objects
+             .all()
+             .order_by('faculty__name', 'surname', 'forenames'))
+
+    context = {
+        'staff': staff,
+    }
+
+    return render(request, 'staff_list/all_staff_list_by_faculty.html', context,)

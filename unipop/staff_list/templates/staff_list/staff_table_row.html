@@ -1,0 +1,18 @@
+    <tr>
+        <td>
+            {{ staff_member.surname }}, {{ staff_member.forenames }}
+        </td>
+        <td>
+            {{ staff_member.faculty }}
+        </td>
+        <td>
+            {{ staff_member.room }}
+        </td>
+        <td>
+            {{ staff_member.email }}
+        </td>
+        <td>
+            <a href="{% url "staff_list:staff_detail" staff_member.id %}"><span class="icon is-color-primary"><i class="fa-solid fa-user"></i></span></a>
+            <a href="{% url "staff_list:staff_detail_from_slug" staff_member.slug %}"><span class="icon is-color-info"><i class="fa-solid fa-user"></i></span></a>
+        </td>
+    </tr>
