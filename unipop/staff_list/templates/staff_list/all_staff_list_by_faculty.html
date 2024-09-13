@@ -9,20 +9,25 @@
 {% endblock %}
 
 {% block content %}
-    <p class="mb-4">
-        Our current staff list is below. Click on a staff member's name to view their profile.
-    </p>
+    {% if staff %}
+        <p class="mb-4">
+            Our current staff list is below. Click on a staff member's name to view their profile.
+        </p>
 
-    {% regroup staff by faculty.name as faculty_staff %}
+        {% regroup staff by faculty.name as faculty_staff %}
 
-    {% for faculty in faculty_staff %}
-        <h2 class="title is-3 is-color-grey-darker has-text-left">{{ faculty.grouper }}</h2>
-        {% include 'staff_list/staff_table_open.html' %}
-        {% for staff_member in faculty.list %}
-            {% include 'staff_list/staff_table_row.html' %}
+        {% for faculty in faculty_staff %}
+            <h2 class="title is-3 is-color-grey-darker has-text-left">Faculty of {{ faculty.grouper }}</h2>
+            {% include 'staff_list/staff_table_open.html' %}
+            {% for staff_member in faculty.list %}
+                {% include 'staff_list/staff_table_row.html' %}
+            {% endfor %}
+            {% include 'staff_list/staff_table_close.html' %}
+
         {% endfor %}
-        {% include 'staff_list/staff_table_close.html' %}
-
-    {% endfor %}
-
+    {% else %}
+        <p>
+            There are no staff members to display.
+        </p>
+    {% endif %}
 {% endblock %}

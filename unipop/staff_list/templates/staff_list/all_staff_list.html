@@ -9,12 +9,13 @@
 {% endblock %}
 
 {% block content %}
-    <p class="mb-4">
-        Our current staff list is below. Click on a staff member's name to view their profile.
-    </p>
+
 
     <div class="has-text-centered mb-4 mx-auto">
         {% if staff %}
+            <p class="mb-4">
+                Our current staff list is below. Click on a staff member's name to view their profile.
+            </p>
             {% include 'staff_list/staff_table_open.html' %}
                 {% for staff_member in staff %}
                     {% include 'staff_list/staff_table_row.html' %}
