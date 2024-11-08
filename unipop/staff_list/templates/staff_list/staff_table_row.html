@@ -1,6 +1,6 @@
     <tr>
         <td>
-            {{ staff_member.surname }}, {{ staff_member.forenames }}
+            <a href="{% url "staff_list:staff_detail_from_slug" staff_member.slug%}">{{ staff_member.surname }}, {{ staff_member.forenames }}</a>
         </td>
         <td>
             {{ staff_member.faculty }}
